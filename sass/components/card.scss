@@ -1,0 +1,151 @@
+.card {
+    perspective: 1500px;
+    -moz-perspective: 1500px;
+    position: relative;
+    height: 500px;
+
+    &__side{
+        background: $grid-color;
+        height: 500px;
+        transition: all .8s ease;
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 500px;
+        overflow: hidden;
+        backface-visibility: hidden;
+         &--front {
+            background: $color-white;
+            box-shadow: 0 15px 40px rgba($color-black,.15);
+
+            
+         }
+         &--back {
+            background-color: green;
+            transform: rotateY(180deg);
+            border-radius: 3px;
+            box-shadow: 0 15px 40px rgba($color-black,.15);
+
+            &-1 {
+                background: linear-gradient(to right bottom,$color-back1,$color-back2);
+            }
+            &-2 {
+                background: linear-gradient(to right bottom,$lightgreen,$darkgreen);
+            }
+            &-3 {
+                background: linear-gradient(to right bottom,$color-back3,$color-back4);
+            }
+                    
+        }
+    }
+   
+
+    &:hover .card__side--front {
+        transform: rotateY(-180deg);
+    }
+    &:hover .card__side--back {
+        transform: rotateY(0deg);
+    }
+    &__picture {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        border-top-left-radius: 3px;
+        border-top-right-radius: 3px;
+        
+        height: 230px;
+        &-1 {
+            background:linear-gradient(to right bottom,$color-back1,$color-back2),url("../img/nat-5.jpg");
+            background-blend-mode: screen;
+            background-position: center;
+            background-size: cover;
+            
+
+        }
+        &-2 {
+            background:linear-gradient(to right bottom,$lightgreen,$darkgreen),url("../img/nat-6.jpg");
+            background-blend-mode: screen;
+            background-position: center;
+            background-size: cover;
+            
+
+        }
+        &-3 {
+            background:linear-gradient(to right bottom,$color-back3,$color-back4),url("../img/nat-7.jpg");
+            background-blend-mode: screen;
+            background-position: center;
+            background-size: cover;
+
+        }
+    }
+    &__heading {
+        font-size: 28px;
+        font-weight: 400;
+        text-transform: uppercase;
+        color:$color-white;
+        position: absolute;
+        top: 120px;
+        right: 20px;
+        text-align: right;
+        width: 75%;
+        
+    }
+    &__heading-span{
+        &--1 {
+            background: linear-gradient(to right bottom,rgba($color-back1,.85),rgba($color-back2,.85));
+            padding: 10px 15px;
+            box-decoration-break: clone;
+        }
+        &--2 {
+            background: linear-gradient(to right bottom,rgba($lightgreen,.85),rgba($darkgreen,.85));
+            padding: 10px 15px;
+            box-decoration-break: clone;
+        }
+        &--3 {
+            background: linear-gradient(to right bottom,rgba($color-back3,.85),rgba($color-back4,.85));
+            padding: 10px 15px;
+            box-decoration-break: clone;
+        }
+    }
+    &__details {
+        padding: 30px;
+
+        ul {
+            list-style: none;
+            width: 80%;
+            margin: 0 auto;
+            li {
+                text-align: center;
+                font-size: 15px;
+                padding: 10px;
+                 &:not(:last-child){
+                     border-bottom: 1px solid #eee;
+                 }
+            }
+        }
+    }
+
+    &_cta {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+      &__price-box {
+        text-align: center;
+        margin-bottom: 80px;
+        color: $color-white;
+      }  
+      &__price-only {
+        font-size: 14px;
+        text-transform: uppercase
+      }
+      &__price-value {
+          font-size: 60px;
+          font-weight: 100;
+          
+    }
+    
+}

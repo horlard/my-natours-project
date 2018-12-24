@@ -1,0 +1,46 @@
+@keyframes moveinleft {
+    0% {
+        opacity:0;
+        transform: translate(-100px);
+    }
+    80% {
+        transform: translate(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+@keyframes moveinright {
+    0% {
+        opacity:0;
+        transform: translate(100px);
+    }
+    80% {
+        transform: translate(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}  
+@keyframes btn_pop {
+    0% {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes logo {
+    0% {
+        opacity: 0;
+        transform: translate(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}

@@ -1,0 +1,121 @@
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 1.65em;
+    transition: all .8s;
+    position: relative;
+    color: #0000  red;
+    
+
+
+}
+.tours_btn {
+    background: $color-white;
+    padding:15px 40px;
+    color: #777;
+}
+.tours_btn::after{
+    background: $color-white;
+}
+.discover_btn {
+    background: $mediumgreen;
+    padding:15px 40px;
+    color: $color-white;
+}
+.discover_btn::after{
+    background: $mediumgreen;
+}
+.popup__btn {
+    background: $mediumgreen;
+    padding:15px 40px;
+    color: $color-white;
+}
+.popup__btn::after{
+    background: $mediumgreen;
+}
+div.next {
+    margin-top: 90px;
+}
+.next_btn {
+    background: $mediumgreen;
+    padding:15px 40px;
+    color: $color-white;
+}
+.next_btn::after{
+    background: $mediumgreen;
+}
+
+.btn:hover {
+    box-shadow: 0 10px 20px rgba($color-black,.3);
+    transform: translateY(-3px);
+}
+.btn:active {
+    box-shadow: 0 5px 10px rgba($color-black,.3);
+    transform: translateY(-1px);
+}
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: -1;
+    transition: all .4s;
+
+}
+.header_btn::after {
+    background: $color-white;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+.header_btn {
+    background: $color-white;
+    padding:15px 40px;
+    animation-name: btn_pop;
+    animation-duration: .7s;
+    animation-delay: .75s;
+    animation-fill-mode: backwards;
+    color:$darkgreen;
+}
+.btn-text {
+    &:link,&:visited{
+        text-decoration: none;
+        display: inline-block;
+        color: $mediumgreen;
+        border-bottom: 1px solid $mediumgreen;
+        transition: all .2s;
+        margin-top: -12px;
+    }
+    
+    &:hover {
+        background-color: $mediumgreen;
+        padding: 3px;
+        color:$color-white;
+        box-shadow: 0 1rem 2rem rgba($color-black,.15);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        background-color: $mediumgreen;
+        padding: 3px;
+        color:$color-white;
+        box-shadow: 0 .5rem 1rem rgba($color-black,.15);
+        transform: translateY(2px);
+    }
+    &__read {
+        text-align: center;
+    }
+
+}
+div.read {
+    text-align: center;
+    margin-top: 120px;
+}

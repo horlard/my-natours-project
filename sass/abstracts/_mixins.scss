@@ -1,0 +1,14 @@
+@mixin logo {
+    animation-name: logo;
+    animation-duration: 1s;
+    animation-fill-mode: both;
+}
+@mixin clearfix {
+    &::after{
+        content: "";
+        clear: both;
+        display:table;
+    }
+    
+
+}

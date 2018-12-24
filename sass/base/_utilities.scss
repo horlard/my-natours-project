@@ -1,0 +1,49 @@
+.u-centre-text {
+    text-align: center;
+    margin-top: -150px;
+}
+.u-margin-bottom-medium {
+    margin-bottom: 10px;
+}
+.u-margin-bottom-big {
+    margin-bottom: 8rem;
+}
+.u-margin-bottom-small {
+    margin-bottom: 1rem;
+}
+
+.composition {
+    position: relative;
+    margin-left: 50px;
+    .composition-photo {
+        width: 55%;
+        position: absolute;
+        transition: all .2s;
+        outline-offset: 20px;
+        border-radius: 2px;
+        box-shadow: 0px 15px 40px rgba($color-black,.5);
+        
+        z-index: 10;
+        &:hover {
+            outline: 15px solid $mediumgreen;
+            transform: scale(1.05);
+            box-shadow: 0px 15px 40px rgba($color-black,.5);
+            z-index: 20;
+        }
+    }
+    .composition-photo--p1 {
+        top:-25px;
+        right: 50%;
+    }
+    
+    .composition-photo--p2 {
+        top: 22px;
+        right: 5%;
+    }
+    .composition-photo--p3 {
+        top: 100px;
+        right: 30%;
+    }
+    
+
+}
